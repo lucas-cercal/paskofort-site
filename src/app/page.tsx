@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
   return (
@@ -35,15 +37,44 @@ export default function Home() {
           </a>
 
           {/* IMAGEM DECORATIVA (genérica) */}
-          <div className="mt-10">
-            <Image
-              src="https://images.unsplash.com/photo-1601047991543-24e874e95f0e"
-              alt="Oficina de Marcenaria"
-              width={800}
-              height={500}
-              className="rounded-xl shadow-lg object-cover w-full max-w-3xl h-64 sm:h-80 md:h-96"
-            />
+          {/* SLIDER DE IMAGENS */}
+          <div className="mt-10 w-full max-w-3xl rounded-xl overflow-hidden shadow-lg">
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+              autoPlay
+              interval={4000}
+              emulateTouch
+              className="w-full"
+            >
+              {[
+                {
+                  src: "/foto1.jpeg",
+                  alt: "Oficina 1",
+                },
+                {
+                  src: "/foto2.jpeg",
+                  alt: "Oficina 2",
+                },
+                {
+                  src: "/foto3.jpeg",
+                  alt: "Oficina 3",
+                },
+              ].map((img, idx) => (
+                <div key={idx}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={800}
+                    height={500}
+                    className="object-cover w-full h-64 sm:h-80 md:h-96"
+                  />
+                </div>
+              ))}
+            </Carousel>
           </div>
+
         </section>
 
         {/* SOBRE */}
@@ -62,9 +93,9 @@ export default function Home() {
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { title: "Mesa Rústica", image: "/mesa.jpg" },
-              { title: "Estante de Parede", image: "/estante.jpg" },
-              { title: "Cadeira Artesanal", image: "/cadeira.jpg" },
+              { title: "Quarto", image: "/foto4.jpeg" },
+              { title: "Banheiro", image: "/foto5.jpeg" },
+              { title: "Cadeira Artesanal", image: "/foto4.jpeg" },
             ].map((item, idx) => (
               <div
                 key={idx}
