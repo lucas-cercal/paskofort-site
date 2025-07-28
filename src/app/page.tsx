@@ -1,103 +1,91 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold text-neutral-800">PaskoFort</div>
+          <nav className="hidden sm:flex gap-6 text-neutral-700 font-medium text-sm">
+            <a href="#sobre" className="hover:text-neutral-900">Sobre</a>
+            <a href="#produtos" className="hover:text-neutral-900">Produtos</a>
+            <a href="#contato" className="hover:text-neutral-900">Contato</a>
+          </nav>
         </div>
+      </header>
+
+      {/* CONTEÚDO PRINCIPAL */}
+      <main className="mt-20 font-sans bg-neutral-100 text-neutral-900">
+        {/* HERO */}
+        <section className="bg-[url('/madeira-bg.jpg')] bg-cover bg-center text-white flex flex-col justify-center items-center text-center px-6 py-24">
+          <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
+            PaskoFort Marcenaria
+          </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl drop-shadow-md">
+            Peças únicas feitas à mão com qualidade e paixão por madeira.
+          </p>
+          <a
+            href="#produtos"
+            className="mt-8 px-6 py-3 rounded-full bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition"
+          >
+            Ver produtos
+          </a>
+        </section>
+
+        {/* SOBRE */}
+        <section id="sobre" className="py-16 px-6 md:px-20 bg-white text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre Nós</h2>
+          <p className="text-lg max-w-3xl mx-auto">
+            A <strong>PaskoFort</strong> é uma marcenaria apaixonada por transformar madeira em arte. Com mais de 10 anos de experiência, criamos móveis sob medida com acabamento impecável, respeitando o design, o cliente e a sustentabilidade.
+          </p>
+        </section>
+
+        {/* PRODUTOS */}
+        <section id="produtos" className="py-16 px-6 md:px-20 bg-neutral-100">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            Produtos em Destaque
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              { title: "Mesa Rústica", image: "/mesa.jpg" },
+              { title: "Estante de Parede", image: "/estante.jpg" },
+              { title: "Cadeira Artesanal", image: "/cadeira.jpg" },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="text-sm mt-2 text-neutral-600">
+                    Produto artesanal feito sob medida.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer id="contato" className="bg-neutral-900 text-white py-10 text-center">
+          <p className="mb-4">© {new Date().getFullYear()} PaskoFort Marcenaria</p>
+          <div className="flex justify-center gap-6 text-white/80">
+            <a href="#" className="hover:text-white">Instagram</a>
+            <a href="#" className="hover:text-white">WhatsApp</a>
+            <a href="#" className="hover:text-white">Facebook</a>
+          </div>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
