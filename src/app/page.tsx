@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* BOTÃO WHATSAPP FLUTUANTE */}
       <a
-        href="https://wa.me/5511999999999?text=Olá%2C+gostaria+de+saber+mais+sobre+os+produtos+da+PaskoFort"
+        href="https://wa.me/41985318314?text=Olá%2C+gostaria+de+saber+mais+sobre+os+produtos+da+PaskoFort"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50"
