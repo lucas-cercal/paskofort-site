@@ -3,7 +3,7 @@
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -35,11 +35,11 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
           <a
-  href="#"
-  className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#6B4C3B] via-[#A67B5B] to-[#5A3E2B]"
->
-  PaskoFort
-</a>
+            href="#"
+            className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#6B4C3B] via-[#A67B5B] to-[#5A3E2B]"
+          >
+            PaskoFort
+          </a>
 
           <nav className="hidden md:flex space-x-10 text-gray-700 font-semibold uppercase tracking-wide">
             <a
@@ -393,36 +393,35 @@ export default function Home() {
             <p className="text-white font-semibold text-lg">
               © {new Date().getFullYear()} PaskoFort Marcenaria. Todos os direitos reservados.
             </p>
-            <div className="flex justify-center space-x-10 text-gray-400">
-              <a
-                href="https://instagram.com/paskofort"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="hover:text-white transition"
-              >
-                Instagram
-              </a>
+            <div className="flex justify-center space-x-10 text-gray-300">
               <a
                 href="mailto:contato@paskofort.com.br"
+                className="hover:text-white transition-colors duration-300"
                 aria-label="Email"
-                className="hover:text-white transition"
               >
                 contato@paskofort.com.br
               </a>
               <a
-                href="tel:+5511999999999"
+                href="tel:+5500000000000"
+                className="hover:text-white transition-colors duration-300"
                 aria-label="Telefone"
-                className="hover:text-white transition"
               >
-                (11) 99999-9999
+                +55 (00) 0000-0000
+              </a>
+              <a
+                href="https://www.instagram.com/paskofort"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                Instagram
               </a>
             </div>
           </div>
         </footer>
       </main>
-      {/* WHATSAPP FIXO */}
-        <a
+      <a
           href="https://wa.me/41985318314?text=Olá%2C+gostaria+de+saber+mais+sobre+os+produtos+da+PaskoFort"
           target="_blank"
           rel="noopener noreferrer"
