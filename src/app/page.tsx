@@ -92,7 +92,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight drop-shadow-md max-w-4xl"
+            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight drop-shadow-md max-w-4xl mt-4"
           >
             Móveis Artesanais <br />
             Feitos com{" "}
@@ -386,7 +386,7 @@ export default function Home() {
         {/* FOOTER */}
         <footer
           id="contato"
-          className="bg-[#5A3E2B] text-gray-300 py-12 px-6 md:px-20 text-center rounded-t-3xl"
+          className="bg-[#5A3E2B] text-gray-300 py-12 px-6 md:px-20 text-center"
           aria-label="Rodapé com informações de contato"
         >
           <div className="max-w-4xl mx-auto space-y-6">
