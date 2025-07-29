@@ -342,7 +342,7 @@ export default function Home() {
                   height={96}
                   className="rounded-full object-cover mb-6 shadow-md"
                 />
-                <p className="text-gray-700 italic mb-4">"{texto}"</p>
+                <p className="text-gray-700 italic mb-4">&quot;{texto}&quot;</p>
                 <span className="font-semibold text-[#5A3E2B]">{nome}</span>
               </motion.div>
             ))}
