@@ -84,7 +84,6 @@ export default function Home() {
           aria-label="Seção principal com chamada"
         >
           <motion.div
-            variants={bloomVariants}
             initial="initial"
             animate="animate"
             className="absolute inset-0 -z-20 bg-gradient-to-tr from-[#A67B5B]/40 via-[#6B4C3B]/30 to-[#5A3E2B]/30 rounded-3xl filter blur-[100px]"
