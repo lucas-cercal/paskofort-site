@@ -231,7 +231,6 @@ export default function Home() {
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-white font-semibold text-lg">© {new Date().getFullYear()} PaskoFort Marcenaria. Todos os direitos reservados.</p>
             <div className="flex justify-center space-x-10 text-gray-300">
-              <a href="mailto:contato@paskofort.com.br" className="hover:text-white transition-colors duration-300" aria-label="Email">contato@paskofort.com.br</a>
               <a href="tel:+554195241227" className="hover:text-white transition-colors duration-300" aria-label="Telefone">+55 (41) 9524-1227</a>
               <a href="https://www.instagram.com/pasko_fort" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300" aria-label="Instagram">Instagram</a>
             </div>
