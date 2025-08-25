@@ -82,7 +82,7 @@ export default function Home() {
       <main className="mt-20 font-sans bg-gradient-to-b from-[#FAF8F5] to-[#FFFFFF] text-gray-800 scroll-smooth selection:bg-[#A67B5B] selection:text-white">
 
         {/* HERO */}
-        <section className="relative flex flex-col justify-center items-center text-center min-h-[90vh] px-6 sm:px-20 overflow-hidden">
+        <section className="relative flex flex-col justify-center items-center text-center min-h-[90vh] px-6 sm:px-20 mb-32 overflow-hidden">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -142,7 +142,7 @@ export default function Home() {
         {/* SOBRE NÓS */}
         <section
           id="sobre"
-          className="py-24 px-6 md:px-20 bg-white max-w-7xl mx-auto rounded-3xl shadow-lg"
+          className="py-32 px-6 md:px-20 bg-white max-w-7xl mx-auto rounded-3xl shadow-lg mb-32"
         >
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -159,10 +159,11 @@ export default function Home() {
             </p>
           </motion.div>
         </section>
+
         {/* GALERIA */}
         <section
           id="galeria"
-          className="py-24 px-6 md:px-20 bg-white max-w-7xl mx-auto rounded-3xl shadow-lg"
+          className="py-32 px-6 md:px-20 bg-white max-w-7xl mx-auto rounded-3xl shadow-lg mb-32"
         >
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -271,7 +272,7 @@ export default function Home() {
         {/* PROCESSO DE TRABALHO */}
         <section
           id="processo"
-          className="py-24 px-6 md:px-20 bg-gradient-to-r from-[#f7f4f1] to-[#e5dfda] max-w-7xl mx-auto rounded-3xl shadow-inner"
+          className="py-32 px-6 md:px-20 bg-gradient-to-r from-[#f7f4f1] to-[#e5dfda] max-w-7xl mx-auto rounded-3xl shadow-inner mb-32"
         >
           <motion.div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl font-extrabold text-[#5A3E2B] mb-12">
@@ -317,7 +318,7 @@ export default function Home() {
         {/* DEPOIMENTOS */}
         <section
           id="depoimentos"
-          className="py-24 px-6 md:px-20 bg-gradient-to-r from-[#FAF8F5] to-[#F5F2EF] max-w-7xl mx-auto rounded-3xl shadow-inner"
+          className="py-32 px-6 md:px-20 bg-gradient-to-r from-[#FAF8F5] to-[#F5F2EF] max-w-7xl mx-auto rounded-3xl shadow-inner mb-32"
         >
           <h2 className="text-4xl font-extrabold text-center text-[#5A3E2B] mb-12">
             O que dizem nossos clientes
@@ -368,7 +369,7 @@ export default function Home() {
         {/* ORÇAMENTO */}
         <section
           id="orcamento"
-          className="py-24 px-6 md:px-20 bg-[#6B4C3B] rounded-3xl max-w-7xl mx-auto my-20 text-white text-center shadow-lg"
+          className="py-32 px-6 md:px-20 bg-[#6B4C3B] rounded-3xl max-w-7xl mx-auto my-32 text-white text-center shadow-lg"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
