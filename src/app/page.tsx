@@ -1,3 +1,16 @@
+// ----------------------------------------------------
+// --   _____               _             __               _
+// --  |  __ \             | |           / _|             | |
+// --  | |__) |  __ _  ___ | | __  ___  | |_   ___   _ __ | |_
+// --  |  ___/  / _` |/ __|| |/ / / _ \ |  _| / _ \ | '__|| __|
+// --  | |     | (_| |\__ \|   < | (_) || |  | (_) || |   | |_
+// --  |_|      \__,_||___/|_|\_\ \___/ |_|   \___/ |_|    \__|
+// --
+// PaskoFort Marcenaria Website
+// Desenvolvido por Lucas Cercal & Vinicius Machado, 2025
+// Código protegido – não copiar ou redistribuir sem autorização
+// ----------------------------------------------------
+
 "use client";
 
 import Image from "next/image";
