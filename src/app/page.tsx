@@ -16,6 +16,10 @@ const galeriaImagens: Foto[] = Array.from({ length: 21 }, (_, i) => ({
   categoria: "Todos",
 }));
 
+const mensagemWhatsApp = encodeURIComponent(
+  "Olá! Estou interessado nos móveis da PaskoFort e gostaria de receber mais informações."
+);
+
 const categorias = ["Todos", "Mesas", "Cadeiras", "Estantes", "Armários"];
 const shuffledImagens = [...galeriaImagens].sort(() => Math.random() - 0.5);
 
@@ -30,6 +34,21 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    console.log(`
+    --   _____               _             __               _
+    --  |  __ \\             | |           / _|             | |
+    --  | |__) |  __ _  ___ | | __  ___  | |_   ___   _ __ | |_
+    --  |  ___/  / _\` |/ __|| |/ / / _ \\ |  _| / _ \\ | '__|| __|
+    --  | |     | (_| |\\__ \\|   < | (_) || |  | (_) || |   | |_
+    --  |_|      \\__,_||___/|_|\\_\\ \\___/ |_|   \\___/ |_|    \\__|
+
+    PaskoFort Marcenaria Website
+    Desenvolvido por Lucas Cercal & Vinicius Machado, 2025
+    Código protegido – não copiar ou redistribuir sem autorização
+    `);
+    }, []);
+
   const imagensFiltradas =
     categoria === "Todos"
       ? galeriaImagens
@@ -37,20 +56,6 @@ export default function Home() {
 
   return (
     <>
-      {/* 
-        -- ----------------------------------------------------
-        --   _____               _             __               _
-        --  |  __ \             | |           / _|             | |
-        --  | |__) |  __ _  ___ | | __  ___  | |_   ___   _ __ | |_
-        --  |  ___/  / _` |/ __|| |/ / / _ \ |  _| / _ \ | '__|| __|
-        --  | |     | (_| |\__ \|   < | (_) || |  | (_) || |   | |_
-        --  |_|      \__,_||___/|_|\_\ \___/ |_|   \___/ |_|    \__|
-        --
-        -- PaskoFort Marcenaria Website
-        -- Desenvolvido por Lucas Cercal & Vinicius Machado, 2025
-        -- Código protegido – não copiar ou redistribuir sem autorização
-        -- ----------------------------------------------------
-      */}
       {/* NAVBAR */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-shadow bg-white/90 backdrop-blur-md ${
@@ -406,7 +411,7 @@ export default function Home() {
           </motion.p>
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="https://wa.me/554195241227"
+            href={`https://wa.me/5511991299974?text=${mensagemWhatsApp}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-full bg-white text-[#6B4C3B] font-bold px-16 py-4 shadow-lg hover:brightness-110 transition"
@@ -427,11 +432,11 @@ export default function Home() {
             </p>
             <div className="flex justify-center space-x-10 text-gray-300">
               <a
-                href="tel:+554195241227"
+                href="tel:+5511991299974"
                 className="hover:text-white transition-colors duration-300"
                 aria-label="Telefone"
               >
-                +55 (41) 9524-1227
+                +55 (11) 9 9129-9974
               </a>
               <a
                 href="https://www.instagram.com/pasko_fort"
@@ -448,7 +453,7 @@ export default function Home() {
 
         {/* BOTÃO FLOTANTE WHATSAPP */}
         <a
-          href="https://wa.me/554195241227?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20PaskoFort"
+          href={`https://wa.me/5511991299974?text=${mensagemWhatsApp}`}
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-8 right-8 z-50 group"
